@@ -45,10 +45,10 @@ Route::post('/index', [App\Http\Controllers\AlbumController::class, 'store'])->n
 Route::get('/tag/{id}', [App\Http\Controllers\Render::class, 'showByTag'])->name('tag');
 Route::post('/NewTag', [App\Http\Controllers\Render::class, 'NewTag'])->name('NewTag')->middleware('auth');
 
-Route::get('/NewAlbum', [App\Http\Controllers\AlbumController::class, 'create'])->name('NewAlbum')->middleware('auth');
-Route::post('/NewAlbum', [App\Http\Controllers\AlbumController::class, 'store'])->name('NewAlbumT')->middleware('auth');
-
 Route::get('/albums', [App\Http\Controllers\Render::class, 'displayAlbums'])->name('albums');
 Route::post('/albums', [App\Http\Controllers\Render::class, 'searchAlbums'])->name('searchAlbums');
 Route::post('/albums/date', [App\Http\Controllers\Render::class, 'searchAlbumsDate'])->name('searchAlbumsDate');
 Route::get('/album/{id}', [App\Http\Controllers\Render::class, 'displayAlbum'])->name('album')->middleware('auth');
+
+Route::get('/NewAlbum', [App\Http\Controllers\AlbumController::class, 'create'])->name('NewAlbum')->middleware('auth');
+Route::post('/NewAlbum', [App\Http\Controllers\AlbumController::class, 'store'])->name('NewAlbumT')->middleware('auth');
