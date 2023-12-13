@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Kalnia');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+html {
+    font-family: Libre Baskerville, serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+    margin-right: 4rem;
+}
+
+main .top {
+    display: flex;
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+main .top .logo-nom a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+main .top .logo-nom a:hover {
+    color: #ccc;
+}
+
+main .top .menu ul li {
+    list-style: none;
+    margin-right: 1rem;
+}
+
+main .top .menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main .top .menu ul li a:hover {
+    color: #ccc;
+}
+
+.global-container {
+    margin: 0 auto;
+}
+
+.main-content {
+    display: flex;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header ul{
+    display: flex;
+    position: fixed;
+    top: 25%;
+    left: 2.5%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    gap: .8rem;
+}
+
+header ul li{
+    font-size: .8rem;
+    list-style: none;
+}

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+
+html {
+    font-family: Libre Baskerville, serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+main .top .menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .top .menu ul li {
+    list-style: none;
+    margin-right: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.container-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-tag .tag a{
+    text-decoration: none;
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 700;
+    padding: 0.5rem .8rem;
+    border-radius: 0.5rem;
+    background-color: #333;
+    text-transform: uppercase;
+}
+
+.container-tag .tag a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.notes input{
+    padding: 0.5rem .5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.notes input:hover {
+    background-color: #444;
+}
+
+.notes select{
+    padding: 0.4rem .5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    gap: .4rem;
+}
+
+.search form input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.search form input:focus {
+    outline: none;
+    border: 1px solid #333;
+}
+
+.search form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search form button:hover {
+    background-color: #444;
+}
+
+.container .photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.container .photo-container .photo {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #0e0e0e;
+    color: #fff;
+    text-align: center;
+}
+
+.container .photo-container .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.container .photo-container .photo img:hover {
+    transform: scale(1.03);
+}
+
+.photo-container h2:hover {
+    text-decoration: underline;
+}
+
+.photo-tags{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.photo-tags a{
+    text-decoration: none;
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 700;
+    padding: 0.5rem .8rem;
+    border-radius: 0.5rem;
+    background-color: #333;
+    text-transform: uppercase;
+}
+
+.photo-tags a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.album-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.album-container .album {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #0e0e0e;
+    color: #fff;
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.container .album-container .album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.container .album-container .album img:hover {
+    transform: scale(1.03);
+}
+
+.album-container .album:hover {
+    background-color: #333;
+}
+
+.deleteAlbum form input {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #5a2020;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.deleteAlbum form input:hover {
+    background-color: #7a2020;
+}
+
+.form-photos {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-photos h1 {
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    display: block;
+    color: #fff;
+    margin: 10px 0 5px;
+}
+
+.form-photos
+input,
+ .form-photos select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-photos input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-photos input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.form-photos form:last-child {
+    margin-top: 20px;
+}
+
+.searchDate {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchDate form {
+    display: flex;
+    align-items: center;
+}
+
+.searchDate select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.searchDate button {
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.searchDate button:hover {
+    background-color: #444;
+}
+
+
+.creation{
+    font-size: .8rem;
+    color: #777;
+}
