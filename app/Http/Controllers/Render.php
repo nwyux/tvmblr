@@ -65,8 +65,21 @@ class Render extends UserController
 
     function NewPhotoT(Request $request)
     {
+        $request->validate([
+            'titre' => 'required|max:255',
+            'url' => 'required|file|mimes:jpg,png,jpeg|max:5000',
+        ]);
+
+        if ($request->file('url')->isValid()) {
+            $f = $request->file('url')->hashName();
+            $request->file('url')->storeAs('public/upload/', $f);
+            $image = "/storage/upload/$f";
+            // dd($image);
+        }
+
     $titre = $request->input('titre');
-    $url = $request->input('url');
+    // $url = $request->input('url');
+    $url = $image;
     $tags = $request->input('tag');
     $album = $request->input('album');
     

@@ -14,12 +14,13 @@
     <div class="container">
         <div class="form-photos">
             <h1>Ajouter une photo</h1>
-            <form action="{{ route('NewPhotoT') }}" method="POST">
+            <form action="{{ route('NewPhotoT') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label for="titre">Titre</label>
                 <input type="text" name="titre" id="titre">
-                <label for="url">Url</label>
-                <input type="text" name="url" id="url">
+                <label for="url">Image</label>
+                <input type="text" name="url" id="url" disabled placeholder="Lien (url)" style="cursor: not-allowed">
+                <input type="file" name="url" id="url">
                 
                 <select name="tag[]" id="" multiple>
                     @foreach ($tags as $tag)
