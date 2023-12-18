@@ -19,8 +19,8 @@
                 <label for="titre">Titre</label>
                 <input type="text" name="titre" id="titre">
                 <label for="url">Image</label>
-                <input type="text" name="url" id="url" disabled placeholder="Lien (url)" style="cursor: not-allowed">
-                <input type="file" name="url" id="url">
+                <input type="text" name="url" id="url" placeholder="Lien (url)">
+                <input type="file" name="url" id="url" disabled style="cursor: not-allowed">
                 
                 <select name="tag[]" id="" multiple>
                     @foreach ($tags as $tag)

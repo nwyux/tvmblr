@@ -65,20 +65,24 @@ class Render extends UserController
 
     function NewPhotoT(Request $request)
     {
-        $request->validate([
-            'titre' => 'required|max:255',
-            'url' => 'required|file|mimes:jpg,png,jpeg|max:5000',
-        ]);
+        // $request->validate([
+        //     'titre' => 'required|max:255',
+        //     'url' => 'required|file|mimes:jpg,png,jpeg|max:5000',
+        // ]);
 
-        if ($request->file('url')->isValid()) {
-            $f = $request->file('url')->hashName();
-            $request->file('url')->storeAs('public/upload/', $f);
-            $image = "/storage/upload/$f";
-            // dd($image);
-        }
+        // if ($request->file('url')->isValid()) {
+        //     $f = $request->file('url')->hashName();
+        //     $request->file('url')->storeAs('public/upload/', $f);
+        //     $image = "/storage/upload/$f";
+        //     // dd($image);
+        // }
+
+        // Le code pour upload semble fonctionné, seulement le chemin de l'image
+        // lors de la vue ne fonctionne pas, il ne trouve pas le bon chemin de l'image
+        // je n'arrive pas à trouver la solution donc je reste sur l'URL.
 
     $titre = $request->input('titre');
-    // $url = $request->input('url');
+    $url = $request->input('url');
     $url = $image;
     $tags = $request->input('tag');
     $album = $request->input('album');
